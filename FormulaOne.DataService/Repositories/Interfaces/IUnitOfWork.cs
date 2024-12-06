@@ -3,8 +3,8 @@
 public interface IUnitOfWork
 {
     IDriverRepository Drivers { get; }
-    IAchievementRepository Achievements { get; }
+    IAchievementsRepository Achievements { get; }
 
 
-    Task CompleteAsync();
+    Task<bool> CompleteAsync();
 }

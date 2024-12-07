@@ -41,7 +41,7 @@ public class GenericRepository<T>(ILogger logger, AppDbContext context) : IGener
 
     public virtual async Task<bool> Update(T entity)
     {
-        _dbSet.Attach(entity);
+         _dbSet.Attach(entity);
         _context.Entry(entity).State = EntityState.Modified;
         return true;
     }
